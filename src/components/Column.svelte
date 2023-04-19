@@ -5,7 +5,6 @@
 	import type { CardData } from '../lib/Card';
 	import Card from './Card.svelte';
 	export let column: ColumnData;
-
 	// Reactive statements
 	let dragCard: CardData;
 	dragItem.subscribe((value) => (dragCard = value));
