@@ -47,9 +47,11 @@ This component displays a column of `Card` components that can be dragged and dr
 		display: flex;
 		flex-direction: column;
 		width: 300px;
-		height: 100em;
-		border: 1px solid black;
-		border-radius: 5px;
+		min-height: 600px;
 		padding: 10px;
 	}
+	.column h1 {
+		text-align: center;
+		color: #6C3D1B;
+	}	
 </style>

@@ -24,7 +24,7 @@ This component displays a Kanban board with three columns (`To Do`, `In Progress
 
 	// Reactive statements
 	$: todoColumnInfo = {
-		title: 'To Do',
+		title: 'Todo',
 		cards: $todoColumnCards
 	};
 	$: inProgressColumnInfo = {

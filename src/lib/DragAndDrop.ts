@@ -4,12 +4,12 @@ import { dragItem, prevColumn, nextColumn } from "../store/DragStore";
 import type { CardData } from "./Card";
 
 const storeMap: Record<string, ReturnType<typeof writable<CardData[]>>> = {
-    "To": todoColumnCards,
+    "Todo": todoColumnCards,
     "In": inProgressColumnCards,
     "Done": doneColumnCards
 }
 
-export const handleDragStart = (event: any, card: CardData) => {
+export function handleDragStart(event: any, card: CardData) {
     // starting a drag operation
     event.dataTransfer.setData("text/plain", event.target.id);
     event.dataTransfer.effectAllowed = "move";
@@ -21,7 +21,7 @@ export const handleDragStart = (event: any, card: CardData) => {
     prevColumn.set(targetParentClass.split(" ")[2]);
 
 };
-export const handleDragOver = (event: any) => {
+export function handleDragOver(event: any) {
     // drag over a valid drop target
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
@@ -35,9 +35,9 @@ export const handleDragOver = (event: any) => {
         let columnName = targetClass.split(" ")[2];
         nextColumn.set(columnName);
     }
-
 };
-export const handleDrop = (event: any, data: CardData) => {
+
+export function handleDrop (event: any, data: CardData){
     // drop on a valid drop target
     event.preventDefault();
     const targetParentClass = event.target.parentElement.className;
