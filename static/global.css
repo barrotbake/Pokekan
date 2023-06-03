@@ -1,3 +1,18 @@
+:root {
+    --poke--red: rgba(225, 101, 108, 1);
+    --exp--blue: rgba(143, 201, 255, 1);
+    --outline--purple: rgba(100, 21, 106, 1);
+    --ultra--yellow: rgba(222, 216, 81, 1);
+    --great--blue: rgba(25, 122, 211, 1);
+    --premier--ball--white: rgba(255, 255, 255, 1);
+    --text--black: rgba(0, 0, 0, 1);
+    --sub-head--brown: rgba(108, 61, 27, 1);
+    --pidgey--brownborder: rgba(213, 167, 134, 1);
+    --zizagoon--beige: rgba(243, 233, 222, 1);
+    --linoon--grey: rgba(170, 152, 138, 1);
+    --exp--grey: rgba(217, 217, 217, 1);
+}
+
 *, html, body {
     background-color: #F3E9DE;
     font-family: 'Work Sans', sans-serif;
