@@ -4,6 +4,7 @@ export const dragItem = writable({
     title: "",
     description: "",
     type: "",
+    id: 0
 });
 
 export const prevColumn = writable("");

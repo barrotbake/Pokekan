@@ -1,28 +1,11 @@
-<!-- 
-@component Card
-
-This component displays a card with a title and description that can be dragged and dropped using the HTML5 drag and drop API.
-
-## Props
-
-- `card: CardData` - A `CardData` object that contains the title and description of the card.
-
-## Event Handlers
-
-- `on:dragstart` - Calls the `handleDragStart` function and passes in the `event` object and the `card` prop.
-
-## Styling
-
-- `.card` - Applies basic styling to the card, including setting the cursor to `move`, adding a border, and setting a minimum height.
--->
-
 <script lang="ts">
 	import type { CardData } from '../lib/Card';
 	import { handleDragStart } from '../lib/DragAndDrop';
 	export let card: CardData = {
 		title: '',
 		description: '',
-		type: ''
+		type: '',
+		id: 0
 	};
 	const decorationMap:Record<string,string> = {
 		'normal': 'decoration',

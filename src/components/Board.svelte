@@ -1,18 +1,3 @@
-<!-- 
-
-@component Board
-
-This component displays a Kanban board with three columns (`To Do`, `In Progress`, and `Done`), each containing a `Column` component.
-
-## Child Components
-
-- `Column` - A child component that displays a column of `Card` components.
-
-## Stores
-
-- `todoColumnCards`, `inProgressColumnCards`, `doneColumnCards` - Stores that contain an array of `CardData` objects for each column.
--->
-
 <script lang="ts">
 	import Column from './Column.svelte';
 	import { todoColumnCards, inProgressColumnCards, doneColumnCards } from '../store/ColumnStore';

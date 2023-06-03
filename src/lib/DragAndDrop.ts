@@ -27,6 +27,7 @@ export function handleDragOver(event: any) {
     event.dataTransfer.dropEffect = "move";
     const targetClass = event.target.className;
     const targetParentClass = event.target.parentElement.className;
+    console.log("Child: " + targetClass, "Parent:" + targetParentClass)
     //get name of column
     if (targetParentClass.includes("drop-target")) {
         let columnName = targetParentClass.split(" ")[2];

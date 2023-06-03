@@ -5,17 +5,20 @@ const initTodoColumnCards: CardData[] = [
     {
         title: "Card 1",
         description: "This is a card",
-        type: "normal"
+        type: "normal",
+        id: 1
     },
     {
         title: "Card 2",
         description: "This is a card",
-        type: "great"
+        type: "great",
+        id: 2
     },
     {
         title: "Card 3",
         description: "This is a card",
-        type: "ultra"
+        type: "ultra",
+        id: 3
     }
 ]
 const initInProgressColumnCards: CardData[] = [];
