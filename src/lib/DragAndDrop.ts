@@ -28,22 +28,18 @@ export function handleDragOver(event: any) {
     const targetClass = event.target.className;
     const targetParentClass = event.target.parentElement.className;
     console.log("Child: " + targetClass, "Parent:" + targetParentClass)
-    //get name of column
-    if (targetParentClass.includes("drop-target")) {
+    //Set the next column for the card to go
+    if (targetParentClass.includes("column") || targetClass.includes("column")) {
         let columnName = targetParentClass.split(" ")[2];
         nextColumn.set(columnName);
-    } else if (targetClass.includes("drop-target")) {
-        let columnName = targetClass.split(" ")[2];
-        nextColumn.set(columnName);
     }
-};
-
+}
 export function handleDrop (event: any, data: CardData){
     // drop on a valid drop target
     event.preventDefault();
     const targetParentClass = event.target.parentElement.className;
     const targetClass = event.target.className;
-    if (targetParentClass.includes("drop-target") || targetClass.includes("drop-target")) {
+    if (targetParentClass.includes("column") || targetClass.includes("column")) {
         let columnName: string = "";
         nextColumn.subscribe(col => columnName = col);
         //Add card to column
